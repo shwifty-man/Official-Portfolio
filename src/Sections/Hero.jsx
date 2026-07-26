@@ -8,11 +8,12 @@ function Hero() {
       <h1 id="Name">Timothy Williams</h1>
       <h2>Full-Stack Engineer</h2>
       <p>Passionate about building responsive, efficient, and user-friendly web applications.</p>
-    </div>
-    <div className="button-container">
+      <div className="button-container">
       <button className="buttons work-button">View my work</button>
       <button className="buttons resume-button">Resume</button>
     </div>
+    </div>
+
     <img className='space-man-svg' src={spaceMan} alt="space man" />
     </div>
     </>
