@@ -1,12 +1,15 @@
+@use "sass:math";
+@use "sass:string";
+
 // n is number of stars required
 @function multiple-box-shadow($n) {
-  $value: "#{random(2000)}px #{random(2000)}px #FFF";
+  $value: "#{math.random(2000)}px #{math.random(2000)}px #FFF";
 
   @for $i from 2 through $n {
-    $value: "#{$value}, #{random(2000)}px #{random(2000)}px #FFF";
+    $value: "#{$value}, #{math.random(2000)}px #{math.random(2000)}px #FFF";
   }
 
-  @return unquote($value);
+  @return string.unquote($value);
 }
 
 $shadows-small: multiple-box-shadow(700);
@@ -16,7 +19,7 @@ $shadows-big: multiple-box-shadow(100);
 html {
   height: 100%;
   background: radial-gradient(ellipse at bottom, #000000 0%, #090A0F 100%);
-  overflow-x: hidden
+  overflow-x: hidden;
 }
 
 #stars {
@@ -27,7 +30,7 @@ html {
   animation: animStar 50s linear infinite;
 
   &::after {
-    content: " ";
+    content: "";
     position: absolute;
     top: 2000px;
     width: 1px;
@@ -45,7 +48,7 @@ html {
   animation: animStar 100s linear infinite;
 
   &::after {
-    content: " ";
+    content: "";
     position: absolute;
     top: 2000px;
     width: 2px;
@@ -63,7 +66,7 @@ html {
   animation: animStar 150s linear infinite;
 
   &::after {
-    content: " ";
+    content: "";
     position: absolute;
     top: 2000px;
     width: 3px;
@@ -88,9 +91,9 @@ html {
   left: 0;
   right: 0;
 
-  color: #FFF;
+  color: #fff;
   text-align: center;
-  font-family: "lato", sans-serif;
+  font-family: "Lato", sans-serif;
   font-weight: 300;
   font-size: 50px;
   letter-spacing: 10px;
@@ -100,14 +103,17 @@ html {
 
   span {
     background: linear-gradient(white, #38495a);
+    background-clip: text;
     -webkit-background-clip: text;
+  
+    color: transparent;
     -webkit-text-fill-color: transparent;
   }
 }
 
 @keyframes animStar {
   from {
-    transform: translateY(0px);
+    transform: translateY(0);
   }
 
   to {

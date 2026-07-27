@@ -10,7 +10,9 @@ function Hero() {
       <p>Passionate about building responsive, efficient, and user-friendly web applications.</p>
       <div className="button-container">
       <button className="buttons work-button">View my work</button>
-      <button className="buttons resume-button">Resume</button>
+      <button onClick={() => window.open('https://docs.google.com/document/d/1WPBMTRlGR-lkMwG35dtoYgdseRwv36NXrOFDWKBeK7M/edit?usp=sharing', '_blank')} className="buttons resume-button">
+  Resume
+</button>
     </div>
     </div>
 
