@@ -18,7 +18,7 @@ $shadows-big: multiple-box-shadow(100);
 
 html {
   height: 100%;
-  background: radial-gradient(ellipse at bottom, #000000 0%, #090A0F 100%);
+  background: radial-gradient(ellipse at bottom, #000000 0%, #000000 100%);
   overflow-x: hidden;
 }
 
@@ -83,6 +83,7 @@ html {
   top: 0;
   left: 0;
   z-index: -1;
+  inset: 0;
 }
 
 @keyframes animStar {
