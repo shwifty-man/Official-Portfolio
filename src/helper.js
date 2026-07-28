@@ -23,3 +23,7 @@ export function useIsVisible(ref) {
 
     return isIntersecting;
 }
+
+export function handleProjectUrl(url) {
+    return () => window.open(url, '_blank')
+}

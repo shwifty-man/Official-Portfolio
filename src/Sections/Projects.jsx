@@ -11,8 +11,8 @@ function Projects() {
             ref={targetElement}
             className={`projects-content ${targetVisible ? "visible" : ""}`}
         >
-            <ProjectCard string="left" name="QuestTracker" />
-            <ProjectCard string="right" name="FeelClear" />
+            <ProjectCard url="https://github.com/shwifty-man/Sl_Quest_Tracker" string="left" name="QuestTracker" />
+            <ProjectCard url="https://github.com/shwifty-man/FeelClear-frontend" string="right" name="FeelClear" />
         </section>
     );
 }
