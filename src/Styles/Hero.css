@@ -4,8 +4,7 @@
   flex-wrap: wrap;
   justify-self: center;
   width: 100%;
-  min-height: 100vh;
-  padding: 0;
+  height: 100vh;
 }
 
 .content {
@@ -90,9 +89,7 @@
 @media (min-width: 1024px) {
   .hero-outer-container {
     flex-wrap: nowrap;
-    align-items: center;
-    padding: 10%;
-    justify-content: space-evenly
+    padding-top: 20%;
   }
 
   .content,
@@ -117,6 +114,11 @@
 }
 
 @media (min-width: 1440px) {
+  .hero-outer-container {
+    flex-wrap: nowrap;
+    padding-top: 15%;
+  }
+
   .buttons {
     width: 150px;
     height: 30px;
@@ -125,5 +127,12 @@
   .content h1 {
     font-size: 65px;
     width: 100%;
+  }
+}
+
+@media (min-width: 1750px) {
+  .hero-outer-container {
+    flex-wrap: nowrap;
+    padding-top: 10%;
   }
 }
