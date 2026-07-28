@@ -10,13 +10,23 @@ import Projects from './Sections/Projects.jsx'
 function App() {
   return (
     <>
-      <div id="stars"></div>
-      <div id="stars2"></div>
-      <div id="stars3"></div>
+      <div className="hero-outer-container">
+        <div id="stars"></div>
+        <div id="stars2"></div>
+        <div id="stars3"></div>
 
-      <Hero />
+        <Hero />
+      </div>
+
       <Skills />
-      <Projects />
+
+      <section className="projects-outer-container">
+        <div id="stars"></div>
+        <div id="stars2"></div>
+        <div id="stars3"></div>
+
+        <Projects />
+      </section>
     </>
   )
 }

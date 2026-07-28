@@ -3,7 +3,6 @@ import spaceMan from '../assets/astronaut_floating.svg'
 function Hero() {
   return (
     <>
-    <div className="hero-outer-container">
     <div className="content">
       <h1 id="Name">Timothy Williams</h1>
       <h2>Full-Stack Engineer</h2>
@@ -17,7 +16,6 @@ function Hero() {
     </div>
 
     <img className='space-man-svg' src={spaceMan} alt="space man" />
-    </div>
     </>
   );
 }

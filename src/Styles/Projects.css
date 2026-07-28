@@ -1,0 +1,8 @@
+.projects-outer-container {
+    height: 200vh;
+    /* background: red; */
+    background-color: #000000;
+    position: relative;
+    z-index: 111;
+    overflow: hidden;
+}

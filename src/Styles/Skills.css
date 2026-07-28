@@ -1,11 +1,11 @@
 .skills-outer-container {
   background: #20272F;
-  /*should be #20272F */
   height: 100vh;
   position: sticky;
   top: 0;
   z-index: 3;
   padding-bottom: 1%;
+  isolation: isolate;
 }
 
 .skills-content {
