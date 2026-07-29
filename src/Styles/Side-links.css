@@ -1,0 +1,59 @@
+.side-links-container {
+    position: fixed;
+    left: -70px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+
+    padding: 30px 20px;
+
+    z-index: 20000;
+
+    /* Glass effect */
+    background: #20272F;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+    transition: left 0.3s ease;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.side-links-container.true {
+    left: 20px;
+}
+
+.side-links-container.false {
+    left: -70px;
+}
+
+
+.icon-div:hover {
+    transform: translateY(-6px);
+    fill: rgba(215, 74, 73, 0.60);
+}
+
+#download-a:hover {
+    transform: translateY(-6px);
+    fill: rgba(215, 74, 73, 0.60);
+}
+
+
+.toggle-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.toggle-arrow.true {
+    right: -20px;
+}
+
+.toggle-arrow.false {
+    right: -20px;
+}
