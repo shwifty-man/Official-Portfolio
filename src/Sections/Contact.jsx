@@ -1,6 +1,7 @@
 import GithubSection from "..//Content/Github-cons.jsx"
 import { FaUser, FaEnvelope, FaRegMessage, FaRegEnvelope } from "react-icons/fa6"
-
+import Footer from '../Sections/Footer.jsx'
+import "../Styles/Footer.css"
 
 function Contact() {
     function handleSubmit(e) {
@@ -49,6 +50,7 @@ function Contact() {
                     <button type="submit" className="contact-button">Send Message {<FaRegEnvelope size={15} color="#ffffff" />}</button>
                 </form>
             </div>
+            <Footer />
         </div>
     );
 }
