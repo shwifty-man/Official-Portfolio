@@ -5,12 +5,14 @@ import "./Styles/Projects.css"
 import "./Styles/Contact.css"
 import "./Styles/Git.css"
 
+import { useRef } from "react";
 import Hero from './Sections/Hero.jsx'
 import Skills from './Sections/Skills.jsx'
 import Projects from './Sections/Projects.jsx'
 import Contact from './Sections/Contact.jsx'
 
 function App() {
+  const targetElement = useRef(null);
   return (
     <>
       <div className="hero-outer-container">
@@ -18,7 +20,7 @@ function App() {
         <div id="stars2"></div>
         <div id="stars3"></div>
 
-        <Hero />
+        <Hero targetElement={targetElement} />
       </div>
 
       <Skills />
@@ -28,7 +30,7 @@ function App() {
         <div id="stars2"></div>
         <div id="stars3"></div>
 
-        <Projects />
+        <Projects ref={targetElement} />
       </section>
       <Contact />
     </>

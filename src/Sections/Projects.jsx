@@ -1,15 +1,15 @@
-import { useRef } from "react";
+
 import { ProjectCard, SmallFloatingAstronaut } from "../Content/Project-card.jsx";
 import { useIsVisible } from "../helper.js";
 import smallAstronaut from "../assets/small_astronaut_floating.png"
 
-function Projects() {
-    const targetElement = useRef(null);
-    const targetVisible = useIsVisible(targetElement);
+function Projects({ ref }) {
+    console.log("Target Element: ", ref)
+    const targetVisible = useIsVisible(ref);
 
     return (
         <section
-            ref={targetElement}
+            ref={ref}
             className={`projects-content ${targetVisible ? "visible" : ""}`}
         >
             <ProjectCard url="https://github.com/shwifty-man/Sl_Quest_Tracker" string="left" name="QuestTracker" />

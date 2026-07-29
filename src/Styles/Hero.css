@@ -65,6 +65,11 @@
   border-radius: 5px;
 }
 
+.buttons:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 18px rgba(215, 74, 73, 0.60);
+}
+
 .work-button {
   background-color: #D74A49;
 }
