@@ -2,7 +2,7 @@ import aiChatIcon from '../assets/chat-head-icon.png'
 import { MdClose } from 'react-icons/md';
 import { Send } from 'lucide-react'
 import { useState } from 'react'
-import { AI_Chat } from '../APIs/Ai-chat.js'
+import { AI_Chat } from '../../APIs/Ai-chat.js'
 
 function ChatView({ onClose }) {
     const [message, setMessage] = useState('')
