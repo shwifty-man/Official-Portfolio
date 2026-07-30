@@ -5,6 +5,7 @@ import "./Styles/Projects.css"
 import "./Styles/Contact.css"
 import "./Styles/Git.css"
 import "./Styles/Side-links.css"
+import "./Styles/AiChat.css"
 
 import { useRef } from "react";
 import Hero from './Sections/Hero.jsx'
@@ -12,11 +13,13 @@ import Skills from './Sections/Skills.jsx'
 import Projects from './Sections/Projects.jsx'
 import Contact from './Sections/Contact.jsx'
 import SideLinks from './Content/Side-links.jsx'
+import ChatButton from './Content/Chat-button.jsx'
 
 function App() {
   const targetElement = useRef(null);
   return (
     <>
+      <ChatButton />
       <SideLinks />
       <div className="hero-outer-container">
         <div id="stars"></div>
