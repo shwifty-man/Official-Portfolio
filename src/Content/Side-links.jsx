@@ -10,7 +10,7 @@ export default function SideLinks() {
                 <div
                     onClick={() => setToggle(!toggle)}
                     className={`toggle-arrow ${toggle ? "true" : "false"}`}>
-                    {toggle ? <FaArrowCircleLeft size={30} color="#fff" /> : <FaArrowCircleRight size={30} color="#fff" />}
+                    {toggle ? <FaArrowCircleLeft size={30} color="rgb(255, 255, 255, 0.8)" /> : <FaArrowCircleRight size={30} color="rgb(255, 255, 255, 0.8)" />}
                 </div>
                 <div onClick={handleProjectUrl("https://github.com/shwifty-man")} className="github-icon" title="GitHub">
                     <FaGithub className="icon-div" size={40} color="#fff" />
