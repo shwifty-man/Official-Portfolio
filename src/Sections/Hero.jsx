@@ -1,7 +1,7 @@
 
 import spaceMan from '../assets/astronaut_floating.svg'
 
-function Hero({targetElement}) {
+function Hero({ targetElement }) {
   console.log("Target Element: ", targetElement)
   return (
     <>
@@ -11,7 +11,7 @@ function Hero({targetElement}) {
         <p>Passionate about building responsive, efficient, and user-friendly web applications.</p>
         <div className="button-container">
           <button onClick={() => { targetElement.current.scrollIntoView({ behavior: "smooth", block: "center", inline: "nearest" }); }} className="buttons work-button">View my work</button>
-          <button onClick={() => window.open('https://docs.google.com/document/d/1WPBMTRlGR-lkMwG35dtoYgdseRwv36NXrOFDWKBeK7M/edit?usp=sharing', '_blank')} className="buttons resume-button">
+          <button onClick={() => window.open('https://docs.google.com/document/d/1ixyvqENs8VhKP-o2o6-DcmCeLRQKeH2Mk3h-c5fdEdE/edit?usp=sharing', '_blank')} className="buttons resume-button">
             Resume
           </button>
         </div>
