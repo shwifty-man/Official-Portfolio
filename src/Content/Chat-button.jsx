@@ -1,5 +1,5 @@
 import aiChatIcon from '../assets/chat-head-icon.png'
-import ChatView from './Chat-view.jsx'
+const ChatView = lazy(() => import("./ChatView"));
 import { useState } from "react";
 
 function ChatButton() {
