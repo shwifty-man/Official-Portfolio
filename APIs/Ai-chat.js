@@ -6,10 +6,9 @@ const client = new Mistral({
 
 export async function AI_Chat(message) {
     try {
-        console.log("ai chat message passed:", message);
-
+        const agentId = String(import.meta.env.VITE_MISTRAL_AI_ID);
         const response = await client.agents.complete({
-            agentId: import.meta.env.VITE_MISTRAL_AI_ID,
+            agentId,
             messages: [
                 {
                     role: "user",
@@ -22,6 +21,6 @@ export async function AI_Chat(message) {
 
     } catch (error) {
         console.error("Mistral error:", error);
-        return "Sorry, I couldn't process that request.";
+        return "Sorry, I couldn't process that request right now.";
     }
 }
