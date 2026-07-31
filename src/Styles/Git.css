@@ -44,3 +44,9 @@
     color: #D74A49;
     font-weight: 700;
 }
+
+@media (max-width: 425px) {
+    .git-contributions h2 {
+        font-size: 22px;
+    }
+}

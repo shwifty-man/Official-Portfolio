@@ -16,7 +16,7 @@
 }
 
 :root {
-  --card-size: 64px;
+  --card-size: 65px;
   --gap: 18px;
   --icon-size: 28px;
 }
@@ -152,6 +152,30 @@
 .skill {
   width: var(--icon-size);
   height: var(--icon-size);
+}
+
+@media (max-width: 425px) {
+  .skills-grid {
+    padding: 24px 8px;
+  }
+
+  :root {
+    --card-size: 45px;
+  }
+
+  .quad {
+    width: min(100%, 150px);
+  }
+
+  .quad-top-left,
+  .quad-bottom-left {
+    transform: translateX(30px);
+  }
+
+  .quad-top-right,
+  .quad-bottom-right {
+    transform: translateX(-30px);
+  }
 }
 
 @media (min-width: 720px) {
