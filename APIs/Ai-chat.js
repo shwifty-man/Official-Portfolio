@@ -9,7 +9,7 @@ export async function AI_Chat(message) {
         const agentId = String(import.meta.env.VITE_MISTRAL_AI_ID);
         const response = await client.agents.complete({
             agentId,
-            messages: [
+            messages: [    
                 {
                     role: "user",
                     content: message,
