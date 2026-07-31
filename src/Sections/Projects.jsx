@@ -4,7 +4,6 @@ import { useIsVisible } from "../helper.js";
 import smallAstronaut from "../assets/small_astronaut_floating.png"
 
 function Projects({ ref }) {
-    console.log("Target Element: ", ref)
     const targetVisible = useIsVisible(ref);
 
     return (

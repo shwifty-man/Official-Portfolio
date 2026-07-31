@@ -2,7 +2,6 @@
 import spaceMan from '../assets/astronaut_floating.svg'
 
 function Hero({ targetElement }) {
-  console.log("Target Element: ", targetElement)
   return (
     <>
       <div className="content">
