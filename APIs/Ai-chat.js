@@ -4,6 +4,9 @@ const client = new Mistral({
     apiKey: import.meta.env.VITE_MISTRAL_API_KEY
 });
 
+console.log("Mistral key:", import.meta.env.VITE_MISTRAL_API_KEY);
+console.log("Agent ID:", import.meta.env.VITE_MISTRAL_AI_ID);
+
 export async function AI_Chat(message) {
     try {
         const agentId = String(import.meta.env.VITE_MISTRAL_AI_ID);
