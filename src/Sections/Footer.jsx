@@ -1,7 +1,7 @@
 function Footer() {
     return (
         <footer className="footer">
-            <p>© {new Date().getFullYear()} Timothy Williams</p>
+            <span><p>© {new Date().getFullYear()} Timothy Williams</p></span>
             <span>Built with React & Vite</span>
         </footer>
     )
