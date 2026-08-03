@@ -41,7 +41,7 @@ function Contact() {
     }
 
     return (
-        <div className="contact-outer-container">
+        <div id="contact" className="contact-outer-container">
             <div className="git-contributions">
                 <h2>Github Contributions</h2>
                 <GithubSection />

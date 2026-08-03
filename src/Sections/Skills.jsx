@@ -2,7 +2,7 @@ import SkillBox from "../Content/Skill-box.jsx"
 
 function Skills() {
   return (
-    <div className="skills-outer-container">
+    <div id="skills" className="skills-outer-container">
       <div className="skills-content">
         <SkillBox />
       </div>

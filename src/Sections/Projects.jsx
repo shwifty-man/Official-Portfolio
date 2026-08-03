@@ -9,6 +9,7 @@ function Projects({ ref }) {
     return (
         <section
             ref={ref}
+            id="projects-content"
             className={`projects-content ${targetVisible ? "visible" : ""}`}
         >
             <ProjectCard url="https://github.com/shwifty-man/Sl_Quest_Tracker" string="left" name="QuestTracker" />

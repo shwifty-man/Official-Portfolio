@@ -17,6 +17,9 @@ function Hero({ targetElement }) {
       </div>
 
       <img className='space-man-svg' src={spaceMan} alt="space man" />
+
+
+      <div id="skills-scroll"></div>
     </>
   );
 }
