@@ -1,7 +1,6 @@
 .ai-chat-icon {
-    position: fixed;
     right: 0%;
-    bottom: 0%;
+    bottom: 3%;
     height: 10%;
 
     display: flex;
@@ -53,6 +52,22 @@
     border-bottom: 1px solid #2a2a2a;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
+}
+
+.ai-inner-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.ai-inner-div img {
+    height: 100%;
+    width: 100%;
+}
+
+.ai-inner-div h3 {
+    color: #B08D57;
 }
 
 .ai-chat-header img {
