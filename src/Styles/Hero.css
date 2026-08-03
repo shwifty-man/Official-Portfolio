@@ -63,6 +63,7 @@
   color: white;
   border: none;
   border-radius: 5px;
+  font-size: smaller;
 }
 
 .buttons:hover {
@@ -78,9 +79,19 @@
   background-color: #2F3A40;
 }
 
+
+#skills-scroll {
+  position: absolute;
+  bottom: -100%;
+}
+
 @media (max-width: 425px) {
   .content {
     padding-top: 30%;
+  }
+  #skills-scroll {
+    position: absolute;
+    bottom: -20%;
   }
 }
 
@@ -94,6 +105,11 @@
 
   .content h1 {
     font-size: 40px;
+  }
+
+  #skills-scroll {
+    position: absolute;
+    bottom: -25%;
   }
 }
 
@@ -122,6 +138,12 @@
     width: 400px;
     height: 500px;
   }
+
+  #skills-scroll {
+    position: absolute;
+    bottom: -40%;
+  }
+
 }
 
 @media (min-width: 1440px) {
@@ -133,11 +155,17 @@
   .buttons {
     width: 150px;
     height: 30px;
+    font-size: medium;
   }
 
   .content h1 {
     font-size: 65px;
     width: 100%;
+  }
+
+  #skills-scroll {
+    position: absolute;
+    bottom: -25%;
   }
 }
 
@@ -145,5 +173,10 @@
   .hero-outer-container {
     flex-wrap: nowrap;
     padding-top: 10%;
+  }
+
+  #skills-scroll {
+    position: absolute;
+    bottom: -30%;
   }
 }
