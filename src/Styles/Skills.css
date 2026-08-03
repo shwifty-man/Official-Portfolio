@@ -5,6 +5,7 @@
   top: 0;
   z-index: 3;
   padding-bottom: 1%;
+  margin-bottom: clamp(20rem, 40vw, 15.5rem);
   isolation: isolate;
 }
 
