@@ -44,7 +44,7 @@ function ChatView({ onClose }) {
                         <img src={aiChatIcon} alt="Ai chat button" />
                         <h3>AI ASSISTANT</h3>
                     </div>
-                    <MdClose size={30} color="#fff" onClick={onClose} />
+                    <MdClose className="header-close" size={30} color="#fff" onClick={onClose} />
                 </div>
 
                 <div className="ai-chat-display">
@@ -79,7 +79,7 @@ function ChatView({ onClose }) {
                         placeholder="What are Timothy's skills?"
 
                     />
-                    {status == 'pending' ? (<Loader2 color="#fff" className="animate-spin" />) : (<Send onClick={() => handleSend()} size={30} color="#B08D57" />)}
+                    {status == 'pending' ? (<Loader2 color="#fff" className="animate-spin" />) : (<Send className="ai-send-button" onClick={() => handleSend()} size={30} color="#B08D57" />)}
                 </div>
             </div>
         </>

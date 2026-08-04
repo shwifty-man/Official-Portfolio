@@ -132,7 +132,7 @@
 
 .project-card-hover:hover {
     transform: scale(1.05);
-
+    cursor: pointer;
 }
 
 .project-card h2 {

@@ -9,6 +9,14 @@
     z-index: 20000;
 }
 
+.ai-chat-icon:hover {
+    cursor: pointer;
+}
+
+.header-close:hover {
+    cursor: pointer;
+}
+
 .ai-inner-header {
     flex-direction: row;
     display: flex;
@@ -184,6 +192,10 @@
 
 .animate-spin {
     animation: spin 2s linear infinite;
+}
+
+.ai-send-button {
+    cursor: pointer;
 }
 
 @keyframes spin {
