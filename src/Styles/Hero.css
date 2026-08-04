@@ -86,10 +86,6 @@
 }
 
 @media (min-width: 425px) {
-  .content {
-    padding-top: 30%;
-  }
-
   #skills-scroll {
     position: absolute;
     bottom: -20%;
