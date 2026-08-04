@@ -4,26 +4,26 @@ import { VscCode } from "react-icons/vsc";
 
 function SkillBox() {
     const skills = [
-        { Icon: SiJavascript, color: "#F7DF1E" },
-        { Icon: SiHtml5, color: "#E34F26" },
-        { Icon: FaCss3Alt, color: "#1572B6" },
-        { Icon: SiJson, color: "#000000" },
-        { Icon: SiPython, color: "#3776AB" },
-        { Icon: SiReact, color: "#61DAFB" },
-        { Icon: SiNodedotjs, color: "#339933" },
-        { Icon: SiExpress, color: "#FFFFFF" },
-        { Icon: SiPostgresql, color: "#4169E1" },
-        { Icon: SiGit, color: "#F05032" },
-        { Icon: SiGithub, color: "#181717" },
-        { Icon: SiLinux, color: "#FCC624" },
-        { Icon: FaWindows, color: "#0078D4" },
-        { Icon: FaFigma, color: "#F24E1E" },
-        { Icon: SiMistralai, color: "#FF7000" },
-        { Icon: SiNpm, color: "#CB3837" },
-        { Icon: SiVite, color: "#646CFF" },
-        { Icon: VscCode, color: "#007ACC" },
-        { Icon: SiMysql, color: "#4479A1" },
-        { Icon: SiCloudflare, color: "#F38020" },
+        { Icon: SiJavascript, label: "JavaScript", color: "#F7DF1E" },
+        { Icon: SiHtml5, label: "HTML5", color: "#E34F26" },
+        { Icon: FaCss3Alt, label: "CSS3", color: "#1572B6" },
+        { Icon: SiJson, label: "JSON", color: "#000000" },
+        { Icon: SiPython, label: "Python", color: "#3776AB" },
+        { Icon: SiReact, label: "React", color: "#61DAFB" },
+        { Icon: SiNodedotjs, label: "Node.js", color: "#339933" },
+        { Icon: SiExpress, label: "Express.js", color: "#FFFFFF" },
+        { Icon: SiPostgresql, label: "PostgreSQL", color: "#4169E1" },
+        { Icon: SiGit, label: "Git", color: "#F05032" },
+        { Icon: SiGithub, label: "GitHub", color: "#181717" },
+        { Icon: SiLinux, label: "Linux", color: "#FCC624" },
+        { Icon: FaWindows, label: "Windows", color: "#0078D4" },
+        { Icon: FaFigma, label: "Figma", color: "#F24E1E" },
+        { Icon: SiMistralai, label: "Mistral AI", color: "#FF7000" },
+        { Icon: SiNpm, label: "NPM", color: "#CB3837" },
+        { Icon: SiVite, label: "Vite", color: "#646CFF" },
+        { Icon: VscCode, label: "VS Code", color: "#007ACC" },
+        { Icon: SiMysql, label: "MySQL", color: "#4479A1" },
+        { Icon: SiCloudflare, label: "Cloudflare", color: "#F38020" },
     ];
 
     // split skills into four quadrant groups of 5
@@ -33,9 +33,10 @@ function SkillBox() {
     const bottomRight = skills.slice(15, 20);
 
     const renderBoxes = (items, prefix) =>
-        items.map(({ Icon, color }, i) => (
+        items.map(({ Icon, label, color }, i) => (
             <div className="skill-card" key={`${prefix}-${i}`}>
                 <Icon className="skill" size={28} color={color} />
+                <h6>{label}</h6>
             </div>
         ));
 
