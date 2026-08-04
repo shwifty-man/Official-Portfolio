@@ -128,7 +128,7 @@
 }
 
 .ai-chat-message-area input:focus {
-    border-color: #D74A49;
+    border-color: #B08D57;
 }
 
 .user-message-outer {
@@ -174,4 +174,18 @@
     line-height: 1.5;
     word-wrap: break-word;
     margin-top: 10px;
+}
+
+.animate-spin {
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
 }

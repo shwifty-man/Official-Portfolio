@@ -1,25 +1,27 @@
 import aiChatIcon from '../assets/chat-head-icon.png'
 import { MdClose } from 'react-icons/md';
-import { Send } from 'lucide-react'
+import { Send, Loader2 } from 'lucide-react'
 import { useState } from 'react'
 import { AI_Chat } from '../../APIs/Ai-chat.js'
 
 function ChatView({ onClose }) {
     const [message, setMessage] = useState('')
-    const [aiResponse, setAiResponse] = useState([])
-    const [status, setStatus] = useState(["pending", "sent!", "failed"])
+    const [aiResponse, setAiResponse] = useState([
+        { ai: "Hi! How can I help you?" }
+    ])
+    const [status, setStatus] = useState("sent!")
 
     async function handleSend() {
         if (!message.trim() || status === 'pending') return;
         setStatus('pending')
 
-
+        const userMessage = message;
         const response = await AI_Chat(message)
 
         setAiResponse(prev => [
             ...prev,
             {
-                user: message,
+                user: userMessage,
 
                 ai: response
             }
@@ -43,9 +45,10 @@ function ChatView({ onClose }) {
                     {aiResponse.map((res, index) => (
                         <div key={index}>
                             <div className="user-message-outer">
-                                <div className="user-message">
+                                {res.user ? <div className="user-message">
                                     {res.user}
-                                </div>
+                                </div> : null}
+
                             </div>
                             <div className="ai-outer-response">
                                 <img src={aiChatIcon} alt="Ai chat button" />
@@ -61,6 +64,7 @@ function ChatView({ onClose }) {
                     <input
                         value={message}
                         onChange={(e) => { setMessage(e.target.value) }}
+                        maxLength={200}
                         onKeyDown={(e) => {
                             if (e.key === "Enter") {
                                 handleSend();
@@ -69,7 +73,7 @@ function ChatView({ onClose }) {
                         placeholder="What are Timothy's skills?"
 
                     />
-                    <Send onClick={() => handleSend()} size={30} color="#B08D57" />
+                    {status == 'pending' ? (<Loader2 color="#fff" className="animate-spin" />) : (<Send onClick={() => handleSend()} size={30} color="#B08D57" />)}
                 </div>
             </div>
         </>
