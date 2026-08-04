@@ -43,13 +43,7 @@ function App() {
 
       <Skills />
 
-      <section id="projects" className="projects-outer-container">
-        <div id="stars"></div>
-        <div id="stars2"></div>
-        <div id="stars3"></div>
-
         <Projects ref={targetElement} />
-      </section>
       <Contact />
     </>
   )
