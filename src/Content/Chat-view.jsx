@@ -7,7 +7,7 @@ import { AI_Chat } from '../../APIs/Ai-chat.js'
 function ChatView({ onClose }) {
     const [message, setMessage] = useState('')
     const [aiResponse, setAiResponse] = useState([
-        { ai: "Hi! How can I help you?" }
+        { ai: "Hi! I'm Timothy's AI assistant. How can I help you?" }
     ])
     const [status, setStatus] = useState("sent!")
 
@@ -32,7 +32,13 @@ function ChatView({ onClose }) {
 
     return (
         <>
-            <div className="ai-chat-outer-view">
+            <div onClick={(e) => {
+                if (e.target === e.currentTarget) {
+                    onClose();
+                }
+            }}
+                className="ai-chat-outer-view">
+
                 <div className="ai-chat-header">
                     <div className="ai-inner-header">
                         <img src={aiChatIcon} alt="Ai chat button" />
