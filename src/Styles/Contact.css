@@ -21,6 +21,7 @@
     background: radial-gradient(circle at top right, #180808 0, #3B1010 100%);
     padding: 25px;
     border-radius: 50px;
+    margin-bottom: 5%;
 }
 
 .contact-form h2,
