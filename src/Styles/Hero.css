@@ -82,13 +82,14 @@
 
 #skills-scroll {
   position: absolute;
-  bottom: -100%;
+  bottom: -10%;
 }
 
-@media (max-width: 425px) {
+@media (min-width: 425px) {
   .content {
     padding-top: 30%;
   }
+
   #skills-scroll {
     position: absolute;
     bottom: -20%;
