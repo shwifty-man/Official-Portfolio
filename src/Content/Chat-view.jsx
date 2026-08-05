@@ -3,6 +3,7 @@ import { MdClose } from 'react-icons/md';
 import { Send, Loader2 } from 'lucide-react'
 import { useState } from 'react'
 import { AI_Chat } from '../../APIs/Ai-chat.js'
+import ReactMarkdown from "react-markdown";
 
 function ChatView({ onClose }) {
     const [message, setMessage] = useState('')
@@ -59,7 +60,9 @@ function ChatView({ onClose }) {
                             <div className="ai-outer-response">
                                 <img src={aiChatIcon} alt="Ai chat button" />
                                 <div className="ai-response-message">
+                                    <ReactMarkdown>
                                     {res.ai}
+                                    </ReactMarkdown>
                                 </div>
                             </div>
                         </div>
@@ -70,7 +73,7 @@ function ChatView({ onClose }) {
                     <input
                         value={message}
                         onChange={(e) => { setMessage(e.target.value) }}
-                        maxLength={200}
+                        maxLength={5000}
                         onKeyDown={(e) => {
                             if (e.key === "Enter") {
                                 handleSend();
